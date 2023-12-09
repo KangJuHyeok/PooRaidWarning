@@ -1,0 +1,138 @@
+<!-- custom_search_layout.xml -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonMen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="남자"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonWomen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="여자"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewToilets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="최소 대변기 수"
+                android:textSize="20sp" />
+            <!-- 대변기 수 몇 대 이상 -->
+
+            <EditText
+                android:id="@+id/editTextToilets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="숫자를 입력하세요"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/textViewUrinals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="최소 소변기 수(남자)"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextUrinals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="숫자를 입력하세요"
+                android:inputType="number" />
+
+            <!-- 장애인 화장실 유무 -->
+            <CheckBox
+                android:id="@+id/checkboxDisabledToilet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="장애인 화장실 유무"
+                android:textSize="20sp" />
+
+            <!-- 어린이 화장실 유무 -->
+            <CheckBox
+                android:id="@+id/checkboxChildToilet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="어린이 화장실 유무"
+                android:textSize="20sp" />
+
+            <!-- 개방 시간 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="개방 시간"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/editTextOpenHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="사용할 시각 (예: 21)"
+                android:inputType="number"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="최소 별점"
+                android:textSize="20sp" />
+            <!-- 별점 -->
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:numStars="5"
+                android:rating="0"
+                android:stepSize="1" />
+
+            <!-- 검색 버튼 -->
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#0B0A0A"
+                android:text="해당 조건을 만족하는 가까운 화장실 검색"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
